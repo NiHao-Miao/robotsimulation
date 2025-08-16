@@ -1,1 +1,0 @@
-mt.exe -manifest "app1.manifest" -outputresource:"RobotSimulation.exe";#1
