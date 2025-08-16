@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>occQtClass</class>
+ <widget class="QMainWindow" name="occQtClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1015</width>
+    <height>718</height>
+   </rect>
+  </property>
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1015</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="actionopen"/>
+    <addaction name="actionOpen_Tool"/>
+    <addaction name="actionOpen_Coord"/>
+    <addaction name="separator"/>
+    <addaction name="actionClear_Moding"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>视图</string>
+    </property>
+    <widget class="QMenu" name="menu">
+     <property name="title">
+      <string>显示模式</string>
+     </property>
+     <addaction name="actionwireframe"/>
+     <addaction name="actionshaded"/>
+    </widget>
+    <widget class="QMenu" name="menuswitchview">
+     <property name="title">
+      <string>切换视图</string>
+     </property>
+     <addaction name="actionfrontview"/>
+     <addaction name="actionrearview"/>
+     <addaction name="actionleftview"/>
+     <addaction name="actionrightview"/>
+     <addaction name="actiontopview"/>
+     <addaction name="actionupview"/>
+     <addaction name="actionAxoview"/>
+    </widget>
+    <widget class="QMenu" name="menuBackground">
+     <property name="title">
+      <string>背景</string>
+     </property>
+     <addaction name="actiongray"/>
+     <addaction name="actionBg_Black"/>
+    </widget>
+    <widget class="QMenu" name="menuGrid">
+     <property name="title">
+      <string>网格</string>
+     </property>
+     <addaction name="actionGrid_enable"/>
+     <addaction name="actionGrid_disable"/>
+    </widget>
+    <addaction name="menu"/>
+    <addaction name="separator"/>
+    <addaction name="menuswitchview"/>
+    <addaction name="separator"/>
+    <addaction name="menuBackground"/>
+    <addaction name="menuGrid"/>
+    <addaction name="separator"/>
+    <addaction name="actionZoom"/>
+    <addaction name="actionPan"/>
+    <addaction name="actionRotate"/>
+    <addaction name="separator"/>
+    <addaction name="actionReset"/>
+    <addaction name="actionFitAll"/>
+   </widget>
+   <widget class="QMenu" name="menuModeling">
+    <property name="title">
+     <string>模型</string>
+    </property>
+    <widget class="QMenu" name="menuConfig">
+     <property name="title">
+      <string>配置</string>
+     </property>
+     <addaction name="actionDH_Config"/>
+     <addaction name="actionRobotConfig"/>
+    </widget>
+    <widget class="QMenu" name="menuload">
+     <property name="title">
+      <string>加载模型</string>
+     </property>
+     <addaction name="separator"/>
+    </widget>
+    <addaction name="actionimport"/>
+    <addaction name="menuload"/>
+    <addaction name="separator"/>
+    <addaction name="menuConfig"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="actionHistoryVersion"/>
+    <addaction name="actionCheck_updae"/>
+    <addaction name="separator"/>
+    <addaction name="actionAbout"/>
+    <addaction name="actionAboutQt"/>
+   </widget>
+   <widget class="QMenu" name="menuNetwork">
+    <property name="title">
+     <string>网络</string>
+    </property>
+    <widget class="QMenu" name="menuremore_control">
+     <property name="title">
+      <string>远程控制</string>
+     </property>
+     <addaction name="actionremote_enable"/>
+     <addaction name="actionremote_disable"/>
+    </widget>
+    <addaction name="menuremore_control"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuTrajectory">
+    <property name="title">
+     <string>轨迹</string>
+    </property>
+    <addaction name="actionStartrecord"/>
+    <addaction name="actionStoprecord"/>
+    <addaction name="separator"/>
+    <addaction name="actionCleartrajectory"/>
+    <addaction name="separator"/>
+    <addaction name="actionimporttrajectory"/>
+    <addaction name="actionExporttrajectory"/>
+    <addaction name="separator"/>
+    <addaction name="oscilloscope"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>编辑</string>
+    </property>
+    <addaction name="actionEdit_enable"/>
+    <addaction name="actionEdit_disable"/>
+   </widget>
+   <widget class="QMenu" name="menuDynamics">
+    <property name="title">
+     <string>动力学</string>
+    </property>
+    <addaction name="IncentiveTrajectory"/>
+    <addaction name="separator"/>
+    <addaction name="IncentiveTrajectoryStart"/>
+    <addaction name="IncentiveTrajectoryStop"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>设置</string>
+    </property>
+    <widget class="QMenu" name="default_robot_2">
+     <property name="title">
+      <string>默认模型</string>
+     </property>
+     <addaction name="separator"/>
+    </widget>
+    <addaction name="actionconfig"/>
+    <addaction name="separator"/>
+    <addaction name="default_robot_2"/>
+   </widget>
+   <widget class="QMenu" name="menuObject">
+    <property name="title">
+     <string>物体</string>
+    </property>
+    <addaction name="actionAdd_Static_Table"/>
+    <addaction name="actionAdd_Dynamic_Cube"/>
+   </widget>
+   <widget class="QMenu" name="menuTool">
+    <property name="title">
+     <string>工具</string>
+    </property>
+    <addaction name="actionLoadTool"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuView"/>
+   <addaction name="menuModeling"/>
+   <addaction name="menuObject"/>
+   <addaction name="menuTool"/>
+   <addaction name="menuTrajectory"/>
+   <addaction name="menuDynamics"/>
+   <addaction name="menuNetwork"/>
+   <addaction name="menu_2"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionExit">
+   <property name="text">
+    <string>退出</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionZoom">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="occqt.qrc">
+     <normaloff>:/Resources/Zoom.png</normaloff>:/Resources/Zoom.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom</string>
+   </property>
+  </action>
+  <action name="actionPan">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="occqt.qrc">
+     <normaloff>:/Resources/Pan.png</normaloff>:/Resources/Pan.png</iconset>
+   </property>
+   <property name="text">
+    <string>Pan</string>
+   </property>
+  </action>
+  <action name="actionRotate">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="occqt.qrc">
+     <normaloff>:/Resources/Rotate.png</normaloff>:/Resources/Rotate.png</iconset>
+   </property>
+   <property name="text">
+    <string>Rotate</string>
+   </property>
+  </action>
+  <action name="actionReset">
+   <property name="icon">
+    <iconset resource="occqt.qrc">
+     <normaloff>:/Resources/Home.png</normaloff>:/Resources/Home.png</iconset>
+   </property>
+   <property name="text">
+    <string>复位</string>
+   </property>
+  </action>
+  <action name="actionFitAll">
+   <property name="icon">
+    <iconset resource="occqt.qrc">
+     <normaloff>:/Resources/FitAll.png</normaloff>:/Resources/FitAll.png</iconset>
+   </property>
+   <property name="text">
+    <string>自适应</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="occqt.qrc">
+     <normaloff>:/Resources/logo.ico</normaloff>:/Resources/logo.ico</iconset>
+   </property>
+   <property name="text">
+    <string>关于</string>
+   </property>
+  </action>
+  <action name="actionBox">
+   <property name="icon">
+    <iconset resource="occqt.qrc">
+     <normaloff>:/Resources/box.png</normaloff>:/Resources/box.png</iconset>
+   </property>
+   <property name="text">
+    <string>Box</string>
+   </property>
+  </action>
+  <action name="actionCone">
+   <property name="icon">
+    <iconset resource="occqt.qrc">
+     <normaloff>:/Resources/cone.png</normaloff>:/Resources/cone.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cone</string>
+   </property>
+  </action>
+  <action name="actionSphere">
+   <property name="icon">
+    <iconset resource="occqt.qrc">
+     <normaloff>:/Resources/sphere.png</normaloff>:/Resources/sphere.png</iconset>
+   </property>
+   <property name="text">
+    <string>Sphere</string>
+   </property>
+  </action>
+  <action name="actionCylinder">
+   <property name="icon">
+    <iconset resource="occqt.qrc">
+     <normaloff>:/Resources/cylinder.png</normaloff>:/Resources/cylinder.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cylinder</string>
+   </property>
+  </action>
+  <action name="actionTorus">
+   <property name="icon">
+    <iconset resource="occqt.qrc">
+     <normaloff>:/Resources/torus.png</normaloff>:/Resources/torus.png</iconset>
+   </property>
+   <property name="text">
+    <string>Torus</string>
+   </property>
+  </action>
+  <action name="actionFillet">
+   <property name="icon">
+    <iconset resource="occqt.qrc">
+     <normaloff>:/Resources/fillet.png</normaloff>:/Resources/fillet.png</iconset>
+   </property>
+   <property name="text">
+    <string>Fillet</string>
+   </property>
+  </action>
+  <action name="actionChamfer">
+   <property name="icon">
+    <iconset resource="occqt.qrc">
+     <normaloff>:/Resources/chamfer.png</normaloff>:/Resources/chamfer.png</iconset>
+   </property>
+   <property name="text">
+    <string>Chamfer</string>
+   </property>
+  </action>
+  <action name="actionExtrude">
+   <property name="icon">
+    <iconset resource="occqt.qrc">
+     <normaloff>:/Resources/extrude.png</normaloff>:/Resources/extrude.png</iconset>
+   </property>
+   <property name="text">
+    <string>Extrude</string>
+   </property>
+  </action>
+  <action name="actionRevolve">
+   <property name="icon">
+    <iconset resource="occqt.qrc">
+     <normaloff>:/Resources/revolve.png</normaloff>:/Resources/revolve.png</iconset>
+   </property>
+   <property name="text">
+    <string>Rovelve</string>
+   </property>
+  </action>
+  <action name="actionLoft">
+   <property name="icon">
+    <iconset resource="occqt.qrc">
+     <normaloff>:/Resources/loft.png</normaloff>:/Resources/loft.png</iconset>
+   </property>
+   <property name="text">
+    <string>Loft</string>
+   </property>
+  </action>
+  <action name="actionCut">
+   <property name="icon">
+    <iconset resource="occqt.qrc">
+     <normaloff>:/Resources/cut.png</normaloff>:/Resources/cut.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cut</string>
+   </property>
+  </action>
+  <action name="actionFuse">
+   <property name="icon">
+    <iconset resource="occqt.qrc">
+     <normaloff>:/Resources/fuse.png</normaloff>:/Resources/fuse.png</iconset>
+   </property>
+   <property name="text">
+    <string>Fuse</string>
+   </property>
+  </action>
+  <action name="actionCommon">
+   <property name="icon">
+    <iconset resource="occqt.qrc">
+     <normaloff>:/Resources/common.png</normaloff>:/Resources/common.png</iconset>
+   </property>
+   <property name="text">
+    <string>Common</string>
+   </property>
+  </action>
+  <action name="actionHelix">
+   <property name="icon">
+    <iconset resource="occqt.qrc">
+     <normaloff>:/Resources/helix.png</normaloff>:/Resources/helix.png</iconset>
+   </property>
+   <property name="text">
+    <string>Helix</string>
+   </property>
+  </action>
+  <action name="actionopen">
+   <property name="text">
+    <string>打开机器人</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionimport">
+   <property name="text">
+    <string>导入模型</string>
+   </property>
+  </action>
+  <action name="actionCheck_updae">
+   <property name="text">
+    <string>检查更新</string>
+   </property>
+  </action>
+  <action name="actionDH_Config">
+   <property name="text">
+    <string>DH参数</string>
+   </property>
+  </action>
+  <action name="actionwireframe">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>线框模式</string>
+   </property>
+   <property name="shortcut">
+    <string>F</string>
+   </property>
+  </action>
+  <action name="actionshaded">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>实体模式</string>
+   </property>
+   <property name="shortcut">
+    <string>S</string>
+   </property>
+  </action>
+  <action name="actionfrontview">
+   <property name="text">
+    <string>前视图</string>
+   </property>
+   <property name="shortcut">
+    <string>1</string>
+   </property>
+  </action>
+  <action name="actionrearview">
+   <property name="text">
+    <string>后视图</string>
+   </property>
+   <property name="shortcut">
+    <string>2</string>
+   </property>
+  </action>
+  <action name="actionleftview">
+   <property name="text">
+    <string>左视图</string>
+   </property>
+   <property name="shortcut">
+    <string>3</string>
+   </property>
+  </action>
+  <action name="actionrightview">
+   <property name="text">
+    <string>右视图</string>
+   </property>
+   <property name="shortcut">
+    <string>4</string>
+   </property>
+  </action>
+  <action name="actiontopview">
+   <property name="text">
+    <string>俯视图</string>
+   </property>
+   <property name="shortcut">
+    <string>5</string>
+   </property>
+  </action>
+  <action name="actionupview">
+   <property name="text">
+    <string>仰视图</string>
+   </property>
+   <property name="shortcut">
+    <string>6</string>
+   </property>
+  </action>
+  <action name="actionAxoview">
+   <property name="text">
+    <string>轴视图</string>
+   </property>
+   <property name="shortcut">
+    <string>7</string>
+   </property>
+  </action>
+  <action name="actionStartrecord">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>开始记录</string>
+   </property>
+  </action>
+  <action name="actionStoprecord">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>停止记录</string>
+   </property>
+  </action>
+  <action name="actionCleartrajectory">
+   <property name="text">
+    <string>清除轨迹</string>
+   </property>
+  </action>
+  <action name="actionimporttrajectory">
+   <property name="text">
+    <string>导入轨迹</string>
+   </property>
+  </action>
+  <action name="actionExporttrajectory">
+   <property name="text">
+    <string>导出轨迹</string>
+   </property>
+   <property name="iconText">
+    <string>导出轨迹</string>
+   </property>
+  </action>
+  <action name="actionremote_enable">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>远程控制开启</string>
+   </property>
+  </action>
+  <action name="actionremote_disable">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>远程控制关闭</string>
+   </property>
+  </action>
+  <action name="actionOpen_Tool">
+   <property name="text">
+    <string>打开工具</string>
+   </property>
+  </action>
+  <action name="actionOpen_Coord">
+   <property name="text">
+    <string>打开工作台</string>
+   </property>
+  </action>
+  <action name="actionClear_Moding">
+   <property name="text">
+    <string>清除模型</string>
+   </property>
+  </action>
+  <action name="actiongray">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>灰色背景</string>
+   </property>
+   <property name="shortcut">
+    <string>G</string>
+   </property>
+  </action>
+  <action name="actionBg_Black">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>黑色背景</string>
+   </property>
+   <property name="shortcut">
+    <string>B</string>
+   </property>
+  </action>
+  <action name="actionGrid_enable">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>网格开启</string>
+   </property>
+  </action>
+  <action name="actionGrid_disable">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>网格禁用</string>
+   </property>
+  </action>
+  <action name="actionAboutQt">
+   <property name="text">
+    <string>关于QT</string>
+   </property>
+  </action>
+  <action name="actionEdit_enable">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>开启编辑</string>
+   </property>
+  </action>
+  <action name="actionEdit_disable">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>关闭编辑</string>
+   </property>
+  </action>
+  <action name="actionconfig">
+   <property name="text">
+    <string>配置</string>
+   </property>
+  </action>
+  <action name="actionRobotConfig">
+   <property name="text">
+    <string>机器人配置</string>
+   </property>
+  </action>
+  <action name="actionHistoryVersion">
+   <property name="text">
+    <string>更新日志</string>
+   </property>
+  </action>
+  <action name="IncentiveTrajectory">
+   <property name="text">
+    <string>激励轨迹</string>
+   </property>
+  </action>
+  <action name="IncentiveTrajectoryStart">
+   <property name="text">
+    <string>运行激励轨迹</string>
+   </property>
+  </action>
+  <action name="IncentiveTrajectoryStop">
+   <property name="text">
+    <string>停止运行激励轨迹</string>
+   </property>
+  </action>
+  <action name="oscilloscope">
+   <property name="text">
+    <string>示波器</string>
+   </property>
+  </action>
+  <action name="actionbroadcast">
+   <property name="text">
+    <string>广播控制</string>
+   </property>
+  </action>
+  <action name="actionAdd_Static_Table">
+   <property name="text">
+    <string>添加静态桌面</string>
+   </property>
+  </action>
+  <action name="actionAdd_Dynamic_Cube">
+   <property name="text">
+    <string>添加动态立方体</string>
+   </property>
+  </action>
+  <action name="actionLoadTool">
+   <property name="text">
+    <string>加载虚拟工具</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="occqt.qrc"/>
+ </resources>
+ <connections/>
+</ui>

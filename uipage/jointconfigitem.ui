@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>JointConfigItem</class>
+ <widget class="QWidget" name="JointConfigItem">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>666</width>
+    <height>130</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>483</width>
+    <height>126</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>651</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>关节</string>
+   </property>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>631</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>模型ID</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="QLabel" name="label_8">
+       <property name="text">
+        <string>负限位</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1" colspan="2">
+      <widget class="QLineEdit" name="model_z"/>
+     </item>
+     <item row="3" column="3">
+      <widget class="QLabel" name="label_9">
+       <property name="text">
+        <string>默认零点</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="4">
+      <widget class="QLineEdit" name="n_limit"/>
+     </item>
+     <item row="1" column="3">
+      <widget class="QLabel" name="label_7">
+       <property name="text">
+        <string>正限位</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="5">
+      <widget class="QLabel" name="label_10">
+       <property name="text">
+        <string>DH参数_d</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="4">
+      <widget class="QLineEdit" name="default_origin"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>X</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="7">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>平移/旋转</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1" colspan="2">
+      <widget class="QLineEdit" name="model_id"/>
+     </item>
+     <item row="1" column="1" colspan="2">
+      <widget class="QLineEdit" name="model_x"/>
+     </item>
+     <item row="0" column="4">
+      <widget class="QComboBox" name="dir">
+       <item>
+        <property name="text">
+         <string>正向</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>反向</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>方向</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>Z</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="4">
+      <widget class="QLineEdit" name="p_limit"/>
+     </item>
+     <item row="2" column="1" colspan="2">
+      <widget class="QLineEdit" name="model_y"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>Y</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="8">
+      <widget class="QComboBox" name="type">
+       <item>
+        <property name="text">
+         <string>X</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Y</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Z</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>RX</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>RY</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>RZ</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="0" column="6">
+      <widget class="QLineEdit" name="dh_d"/>
+     </item>
+     <item row="1" column="5">
+      <widget class="QLabel" name="label_11">
+       <property name="text">
+        <string>DH参数_a</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="6">
+      <widget class="QLineEdit" name="dh_a"/>
+     </item>
+     <item row="2" column="5">
+      <widget class="QLabel" name="label_12">
+       <property name="text">
+        <string>DH参数_theta</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="6">
+      <widget class="QLineEdit" name="dh_theta"/>
+     </item>
+     <item row="3" column="5">
+      <widget class="QLabel" name="label_13">
+       <property name="text">
+        <string>DH参数_alpha</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="6">
+      <widget class="QLineEdit" name="dh_alpha"/>
+     </item>
+     <item row="1" column="7">
+      <widget class="QLabel" name="label_14">
+       <property name="text">
+        <string>最大速度</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="8">
+      <widget class="QLineEdit" name="max_speed"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

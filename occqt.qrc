@@ -1,0 +1,33 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Resources/FitAll.png</file>
+        <file>Resources/Home.png</file>
+        <file>Resources/Pan.png</file>
+        <file>Resources/Rotate.png</file>
+        <file>Resources/Zoom.png</file>
+        <file>Resources/cone.png</file>
+        <file>Resources/cylinder.png</file>
+        <file>Resources/sphere.png</file>
+        <file>Resources/box.png</file>
+        <file>Resources/torus.png</file>
+        <file>Resources/chamfer.png</file>
+        <file>Resources/fillet.png</file>
+        <file>Resources/lamp.png</file>
+        <file>Resources/common.png</file>
+        <file>Resources/cut.png</file>
+        <file>Resources/fuse.png</file>
+        <file>Resources/extrude.png</file>
+        <file>Resources/loft.png</file>
+        <file>Resources/revolve.png</file>
+        <file>Resources/helix.png</file>
+        <file>Resources/logo.ico</file>
+        <file>Resources/logo.png</file>
+        <file>Resources/pause.png</file>
+        <file>Resources/play.png</file>
+        <file>Resources/stop.png</file>
+        <file>Resources/style/styles/drakula.xml</file>
+        <file>Resources/style/default_style.xml</file>
+        <file>Resources/style/code_samples/lua.lua</file>
+        <file>Resources/style/languages/lua.xml</file>
+    </qresource>
+</RCC>

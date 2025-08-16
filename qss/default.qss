@@ -1,0 +1,19 @@
+QMenu {
+    background-color: #2E2E2E; /* 菜单背景颜色 */
+    border: 1px solid #444444; /* 菜单边框 */
+}
+
+.styledAction {
+    color: white; /* 正常状态文本颜色 */
+    padding: 10px; /* 内边距 */
+}
+
+.styledAction:hover {
+    background-color: #3D3D3D; /* 悬停状态背景颜色 */
+    color: #FFCC00; /* 悬停状态文本颜色 */
+}
+
+.styledAction:pressed {
+    background-color: #5B5B5B; /* 按下状态背景颜色 */
+    color: #FFD700; /* 按下状态文本颜色 */
+}
